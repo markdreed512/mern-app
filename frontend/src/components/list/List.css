@@ -3,8 +3,8 @@ form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
 
@@ -23,6 +23,18 @@ form {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 30px;
+}
+
+input[type=text] {
+  width: 300px;
+  font-size: 20px;
+}
+
+input[type=submit] {
+  width: 90px;
+  background: teal;
+  color: white;
+  border: none;
 }
 
 ul.todos {
@@ -59,9 +71,14 @@ ul.todos li:nth-child(even) {
   background: rgba(0, 0, 0, 0.05);
 }
 
-input[type=checkbox] {
+ul.todos input[type=checkbox] {
   margin-right: 10px;
   vertical-align: middle;
+}
+
+ul.todos .date {
+  font-size: 10px;
+  padding-right: 10px;
 }
 
 .strike {

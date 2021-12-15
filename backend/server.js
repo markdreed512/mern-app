@@ -12,7 +12,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/api/add', (req, res) => {
-    
+    console.log(req.body)
+    res.json({status: 'oK'})
 })
 
 app.listen(PORT, () => {
