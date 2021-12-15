@@ -1,0 +1,53 @@
+form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  ul.todos {
+    list-style-type: none;
+    box-shadow: 0px 2px 5px rgb(82, 80, 80);
+    width: 400px;
+    background:rgb(223, 219, 219) ;
+    padding: 0px;
+    font-size: 20px;
+    li{
+        padding:5px 15px;
+        display: flex;
+        justify-content: space-between;
+        button.delete{
+            font-size: 14px;
+            border:1px solid red;
+            background:none;
+            padding: 4px;;
+            color: rgb(252, 0, 0);
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    }
+    li:nth-child(even) {
+        background: rgba(0,0,0,.05);
+      }
+  }
+  
+  input[type=checkbox] {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .strike {
+    text-decoration: line-through;
+  }
+  .no-strike{
+    text-decoration: none;
+  }

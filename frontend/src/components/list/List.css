@@ -1,0 +1,74 @@
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+ul.todos {
+  list-style-type: none;
+  -webkit-box-shadow: 0px 2px 5px #525050;
+          box-shadow: 0px 2px 5px #525050;
+  width: 400px;
+  background: #dfdbdb;
+  padding: 0px;
+  font-size: 20px;
+}
+
+ul.todos li {
+  padding: 5px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+ul.todos li button.delete {
+  font-size: 14px;
+  border: 1px solid red;
+  background: none;
+  padding: 4px;
+  color: #fc0000;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+ul.todos li:nth-child(even) {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.no-strike {
+  text-decoration: none;
+}
+/*# sourceMappingURL=List.css.map */
