@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { uid } from "uid";
+import UserContext from '../UserContext'
 import "./List.css";
+import jwt from 'jsonwebtoken'
 
 function List() {
-  const [todos, setTodos] = useState([]);
-  const [todo, setTodo] = useState("");
+  const [ username, setUsername ] = useContext(UserContext)
+  const [ todos, setTodos ] = useState([]);
+  const [ todo, setTodo ] = useState("");
+
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
@@ -17,6 +21,7 @@ function List() {
         text: todo,
         done: false,
         date: `${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`,
+        username: username
       };
       setTodos([...todos, newTodo]);
       
@@ -49,6 +54,17 @@ function List() {
       })
     );
   };
+//   const history = useHistory()
+  useEffect(() => {
+      const token = localStorage.getItem('token')
+      if(token){
+          const user = jwt.decode(token)
+          if(!user){
+              localStorage.removeItem('token')
+              window.location.href = '/'
+          }
+      }
+  },[])
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>

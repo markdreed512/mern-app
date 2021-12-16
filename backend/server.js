@@ -3,6 +3,7 @@ const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
 const User = require('./user.model')
+const jwt = require('jsonwebtoken')
 
 app.use(cors())
 app.use(express.json())
@@ -16,8 +17,11 @@ app.post('/api/login', async (req, res) => {
             password: req.body.password
         })
         if(user){
+            const token = jwt.sign({
+                username: user.username
+            }, 'secretKey1234')
             console.log("this user exists")
-            return res.json({ status: 'ok', user: true })
+            return res.json({ status: 'ok', user: token })
         }
         else{
             console.log("couldn't find user")

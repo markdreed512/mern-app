@@ -1,0 +1,22 @@
+.register-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.register-container form {
+  background: var(--primary);
+  padding: 15px;
+}
+
+.register-container form input {
+  margin: 5px;
+}
+
+.register-container form input[type="submit"] {
+  margin: 10px auto;
+}
+/*# sourceMappingURL=Register.css.map */
