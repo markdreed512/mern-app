@@ -1,0 +1,22 @@
+#register, #login{
+    display: flex;
+    flex-direction: column;
+}
+#login{
+    // display: none;
+    
+}
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    .login-btn{
+        width: 200px;
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
